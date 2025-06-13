@@ -22,7 +22,9 @@ searchBtn.addEventListener("click", () => {
   const movieInput = document.querySelector("#movieInput");
   let movieName = movieInput.value;
 
-  fetch(`http://www.omdbapi.com/?apikey=dfbb4694&t=${movieName}`)
+  let apikey = "dfbb4694";
+
+  fetch(`https://www.omdbapi.com/?apikey=${apikey}&t=${movieName}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
